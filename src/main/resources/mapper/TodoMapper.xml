@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.growgreen.todo.TodoMapper">
+    <insert id="insTodo" useGeneratedKeys="true" keyProperty="itodo">
+        INSERT INTO p_todo
+        SET iplant = #{iplant},
+        ctnt = #{ctnt},
+        deadline_time = #{deadlineTime},
+        deadline_date = #{deadlineDate},
+        repeat_yn = #{repeatYn}
+    </insert>
+
+    <insert id="insRepeatDay">
+        INSERT INTO p_day
+        SET itodo = #{itodo},
+        repeat_day = #{repeatDay}
+    </insert>
+
+    <select id="selTodo">
+        SELECT A.itodo, A.ctnt, DATE_FORMAT(A.deadline_date, "%m-%d") deadlineDate,
+        date_format(A.deadline_time, "%H:%i") deadlineTime, B.nick_nm nickNm, B.nm, A.finish_yn finishYn
+        FROM p_todo A
+        INNER JOIN p_plant B
+        ON A.iplant = B.iplant
+        WHERE del_yn = 0 and <![CDATA[ A.deadline_date <= now() ]]>
+        ORDER BY deadline_date desc
+    </select>
+
+    <select id="selTodoByDay">
+        SELECT A.ctnt, DATE_FORMAT(A.deadline_date, "%m-%d") deadlineDate,
+        date_format(A.deadline_time, "%H:%i") deadlineTime, B.nick_nm nickNm, B.nm, A.finish_yn finishYn
+        FROM p_todo A
+        INNER JOIN p_plant B
+        ON A.iplant = B.iplant
+        WHERE deadline_date = #{deadlineDate}
+        AND del_yn = 0
+        ORDER BY deadline_date desc
+    </select>
+
+    <select id="selTodoAll">
+        <![CDATA[
+            SELECT A.ctnt, DATE_FORMAT(A.deadline_date, "%m-%d") deadlineDate,
+            date_format(A.deadline_time, "%H:%i") deadlineTime, B.nick_nm nickNm, B.nm, A.finish_yn finishYn
+            FROM p_todo A
+            INNER JOIN p_plant B
+            ON A.iplant = B.iplant
+            INNER JOIN p_day C
+            ON C.itodo = A.itodo
+            WHERE del_yn = 0 AND finish_yn = 0
+            AND (A.deadline_date >= #{sDate} AND A.deadline_date <= #{eDate})
+            ORDER BY deadline_date
+        ]]>
+    </select>
+
+    <select id="selTodoRepeat">
+        <![CDATA[
+            SELECT A.itodo, A.ctnt, A.deadline_date deadlineDate, DATE_FORMAT(A.deadline_time, "%H:%i") deadlineTime, A.finish_yn finishYn
+            , B.repeat_day repeatDay
+            , C.nick_nm nickNm, C.nm
+            FROM p_todo A
+            INNER JOIN (
+                SELECT B.itodo, GROUP_CONCAT(A.repeat_day SEPARATOR ',') repeat_day
+                FROM p_day A
+                INNER JOIN p_todo B
+                ON A.itodo = B.itodo
+                GROUP BY B.itodo
+            ) B
+            ON A.itodo = B.itodo
+            INNER JOIN p_plant C
+            ON A.iplant = C.iplant
+            WHERE DATE_FORMAT(A.deadline_date, "%Y-%m") <= #{targetDate}
+        ]]>
+    </select>
+
+    <select id="selTodoDetail">
+        SELECT itodo, iplant, deadline_time deadlineTime, deadline_date deadlineDate, ctnt, repeat_yn repeatYn
+        FROM p_todo
+        WHERE itodo = #{itodo}
+    </select>
+
+    <select id="selTodoRepeatDay">
+        SELECT repeat_day repeatDay
+        FROM p_day
+        WHERE itodo = #{itodo}
+    </select>
+
+    <update id="updTodo">
+        UPDATE p_todo
+        SET iplant = #{iplant},
+        deadline_time = #{deadlineTime},
+        deadline_date = #{deadlineDate},
+        ctnt = #{ctnt},
+        repeat_yn = #{repeatYn},
+        updated_at = current_timestamp
+        WHERE itodo = #{itodo}
+    </update>
+
+    <update id="updTodoFinish">
+        UPDATE p_todo
+        SET finish_yn = 1,
+        finished_at = current_timestamp
+        WHERE itodo = #{itodo}
+    </update>
+
+    <update id="updTodoRepeatDay">
+        UPDATE p_day
+        SET repeat_day = #{repeatDay}
+        WHERE itodo = #{itodo}
+    </update>
+
+    <update id="delTodo">
+        UPDATE p_todo
+        SET del_yn = 1
+        WHERE itodo = #{itodo}
+    </update>
+
+    <delete id="delRepeatDay">
+        DELETE FROM p_day
+        WHERE itodo = #{itodo}
+    </delete>
+
+    <select id = "selRepeatTodo">
+        SELECT B.ctnt, A.repeat_day repeatDay,
+        DATE_FORMAT(B.deadline_date, "%m-%d") deadlineDate,
+        DATE_FORMAT(B.deadline_time, "%H:%i") deadlineTime,
+        C.nick_nm nickNm, C.nm
+        FROM p_day A
+        INNER JOIN p_todo B
+        ON A.itodo = B.itodo
+        INNER JOIN p_plant C
+        ON C.iplant = B.iplant
+    </select>
+
+    <insert id="insUpdRepeatDay">
+        INSERT INTO p_todo(iplant, ctnt, deadline_time, deadline_date,repeat_yn)
+        SELECT B.iplant,B.ctnt, B.deadline_time, current_date(), B.repeat_yn
+        FROM p_day A
+        INNER JOIN p_todo B
+        ON A.itodo = B.itodo
+        WHERE A.repeat_day = #{repeatDay}
+    </insert>
+
+</mapper>

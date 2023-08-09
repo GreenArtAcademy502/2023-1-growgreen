@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.growgreen.plant.PlantMapper">
+
+    <insert id="insPlant" useGeneratedKeys="true" keyProperty="iplant">
+        INSERT INTO p_plant
+        ( nick_nm, plant_pic, on_date, ctnt, nm )
+        VALUES
+        ( #{nickNm}, #{plantPic}, #{onDate}, #{ctnt}, #{nm})
+    </insert>
+
+    <insert id="insPlantExPic" useGeneratedKeys="true" keyProperty="iplant">
+        INSERT INTO p_plant
+        ( nick_nm, on_date, ctnt, nm )
+        VALUES
+        ( #{nickNm}, #{onDate}, #{ctnt}, #{nm})
+    </insert>
+
+
+
+
+
+
+    <update id="updPlant">
+        UPDATE p_plant
+        SET nm=#{nm},
+            nick_nm=#{nickNm},
+            plant_pic=#{plantPic},
+            ctnt=#{ctnt},
+            on_date=#{onDate}
+        WHERE iplant=#{iplant}
+    </update>
+
+    <update id="updPlantExPic">
+        UPDATE p_plant
+        SET nm=#{nm},
+        nick_nm=#{nickNm},
+        ctnt=#{ctnt},
+        on_date=#{onDate}
+        WHERE iplant=#{iplant}
+    </update>
+
+
+
+    <delete id="delPlant">
+        DELETE FROM p_plant
+        WHERE iplant=#{iplant}
+    </delete>
+
+    <select id="selPlant" resultType="PlantVo">
+        SELECT iplant, nick_nm nickNm, plant_pic plantPic, nm, on_date onDate
+        FROM p_plant
+    </select>
+
+    <select id="selPlantDetail" resultType="PlantSelDetailVo">
+        SELECT nick_nm nickNm, plant_pic plantPic,
+        DATE(on_date) onDate, ctnt, nm
+        FROM p_plant
+        WHERE iplant=#{iplant}
+    </select>
+
+
+
+</mapper>

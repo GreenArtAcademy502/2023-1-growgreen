@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.growgreen.diary.DiaryMapper">
+
+    <insert id="insDiary" useGeneratedKeys="true" keyProperty="idiary">
+        INSERT INTO p_diary
+        (title, ctnt)
+        VALUES
+        (#{title},#{ctnt})
+    </insert>
+
+    <insert id="insDiaryPic">
+        INSERT INTO p_diary_pic
+        (idiary, pic)
+        VALUES
+        <foreach collection="list" item="item" open="(" separator="), (" close=")">
+            #{item.idiary}, #{item.pic}
+        </foreach>
+    </insert>
+
+    <update id="updDiaryMainPic">
+        UPDATE p_diary
+        SET pic = #{pic}
+        WHERE idiary = #{idiary}
+    </update>
+
+    <delete id="delDiary">
+        DELETE FROM p_diary
+        WHERE idiary = #{idiary}
+    </delete>
+
+    <delete id="delDiarySubPic">
+        DELETE FROM p_diary_pic
+        WHERE ipic = #{ipic}
+    </delete>
+
+    <update id="updDiary">
+        UPDATE p_diary
+        SET title = #{title},
+        ctnt = #{ctnt},
+        pic = #{pic}
+        WHERE idiary = #{idiary}
+    </update>
+
+    <update id="updDiary1">
+        UPDATE p_diary
+        SET title = #{title},
+        ctnt = #{ctnt}
+        WHERE idiary = #{idiary}
+    </update>
+
+    <select id="selDiaryAll">
+        SELECT idiary, DATE(created_at) createdAt, title, ctnt, pic
+        FROM p_diary
+        ORDER BY created_at desc
+    </select>
+
+    <select id="selDiaryById">
+        SELECT idiary, DATE(created_at) createdAt, title, ctnt, pic
+        FROM p_diary
+        WHERE idiary = #{idiary}
+    </select>
+
+    <select id="selDiaryDetailPics">
+        SELECT pic
+        FROM p_diary_pic
+        WHERE idiary = #{idiary}
+    </select>
+
+</mapper>

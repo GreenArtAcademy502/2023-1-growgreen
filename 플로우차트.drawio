@@ -1,0 +1,167 @@
+<mxfile host="app.diagrams.net" modified="2023-07-10T09:26:34.391Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="Tk7tu1iqrkZ48kAxzCta" version="21.5.0" type="github">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="2294" dy="1083" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#C0CFB2" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="5C4PQtdkwazlgucPh_TR-45" value="todo 등록" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="450.5" y="474" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-46" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="534" as="sourcePoint" />
+            <mxPoint x="510.5" y="604" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-47" value="반복" style="rhombus;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="455.5" y="754" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-48" value="NO" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="5C4PQtdkwazlgucPh_TR-54">
+          <mxGeometry x="-0.1" width="160" relative="1" as="geometry">
+            <mxPoint x="565.5" y="808.5" as="sourcePoint" />
+            <mxPoint x="665.5" y="808.5" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-49" value="YES" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-0.1111" width="160" relative="1" as="geometry">
+            <mxPoint x="510.5" y="864" as="sourcePoint" />
+            <mxPoint x="510.5" y="954" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-50" value="todo 반복여부 체크" style="shape=parallelogram;html=1;strokeWidth=1;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=0;size=0.23;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="438" y="604" width="145" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-51" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="684" as="sourcePoint" />
+            <mxPoint x="510.5" y="754" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="5C4PQtdkwazlgucPh_TR-53" target="5C4PQtdkwazlgucPh_TR-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-53" value="작성됐던 todo리스트&lt;br&gt;복사해서 등록" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=0;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="438" y="954" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-54" value="오늘기준 완료처리 될 list" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=0;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="670.5" y="774" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-55" value="당일 날짜 요일 체크 후&lt;br&gt;리스트 복사 후 등록" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=0;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="438" y="1094" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-56" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="1024" as="sourcePoint" />
+            <mxPoint x="510.5" y="1094" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-57" value="등록된 todolist출력" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.31666666666666665;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="445.5" y="1234" width="125" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-58" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="1164" as="sourcePoint" />
+            <mxPoint x="510.5" y="1234" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-59" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="5C4PQtdkwazlgucPh_TR-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="750.5" y="994" as="sourcePoint" />
+            <mxPoint x="570.5" y="1274" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="743.5" y="1274" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-60" value="다이어리 등록" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1550.5" y="398" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-61" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1610" y="458" as="sourcePoint" />
+            <mxPoint x="1610.5" y="528" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-62" value="이미지가 있는가" style="rhombus;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1555.5" y="678" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-63" value="NO" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="5C4PQtdkwazlgucPh_TR-69">
+          <mxGeometry x="-0.1" width="160" relative="1" as="geometry">
+            <mxPoint x="1665.5" y="732.5" as="sourcePoint" />
+            <mxPoint x="1765.5" y="732.5" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-64" value="YES" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-0.1111" width="160" relative="1" as="geometry">
+            <mxPoint x="1610.5" y="788" as="sourcePoint" />
+            <mxPoint x="1610.5" y="878" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-65" value="등록 정보 입력" style="shape=parallelogram;html=1;strokeWidth=1;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=0;size=0.23;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1538" y="528" width="145" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-66" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1610" y="608" as="sourcePoint" />
+            <mxPoint x="1610.5" y="678" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="5C4PQtdkwazlgucPh_TR-68" target="5C4PQtdkwazlgucPh_TR-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-68" value="랜덤파일명 생성&lt;br&gt;저장될 폴더 생성&lt;br&gt;파일생성 및 전송" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=0;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1538" y="878" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-69" value="이미지 이외 정보만 등록" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=0;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1770.5" y="698" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="5C4PQtdkwazlgucPh_TR-70" target="5C4PQtdkwazlgucPh_TR-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-70" value="첫번째 이미지는 썸네일로&lt;br&gt;사용되기 위해 따로 저장&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=0;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1538" y="1018" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-71" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1610" y="948" as="sourcePoint" />
+            <mxPoint x="1610.5" y="1018" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-72" value="등록된 다이어리&lt;br&gt;출력 시 썸네일 사진과&lt;br&gt;업로드한 다중이미지까지 출력" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.31666666666666665;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1545.5" y="1288" width="125" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-73" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1610" y="1088" as="sourcePoint" />
+            <mxPoint x="1610.5" y="1158" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-75" value="다중이미지도 따로 저장&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=0;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1538" y="1158" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-78" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.82;entryY=0.111;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1841" y="1328" as="sourcePoint" />
+            <mxPoint x="1673.5" y="1328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-79" value="" style="endArrow=none;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1842" y="1328" as="sourcePoint" />
+            <mxPoint x="1842.5" y="768" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5C4PQtdkwazlgucPh_TR-81" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1607.5" y="1228" as="sourcePoint" />
+            <mxPoint x="1608" y="1288" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

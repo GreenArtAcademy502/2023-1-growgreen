@@ -1,0 +1,25 @@
+# db config
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 35MB
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/growgreen
+    username: root
+    password: green502
+
+# mybatis config
+mybatis:
+  type-aliases-package: com.green.growgreen
+  mapper-locations: mapper/**/*.xml
+
+# swagger
+springdoc:
+  swagger-ui:
+    path: /swagger.html
+
+file:
+  dir: /home/download/
